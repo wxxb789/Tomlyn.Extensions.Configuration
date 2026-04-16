@@ -20,8 +20,9 @@ namespace Tomlyn.Extensions.Configuration
         private IDictionary<string, string> ParseStream(Stream input)
         {
             using var reader = new StreamReader(input);
-            var doc = Toml.Parse(reader.ReadToEnd());
-            VisitObject(doc.ToModel());
+            var model = TomlSerializer.Deserialize<TomlTable>(reader.ReadToEnd())
+                ?? throw new FormatException("TOML deserialization returned null");
+            VisitObject(model);
             return _data;
         }
 
