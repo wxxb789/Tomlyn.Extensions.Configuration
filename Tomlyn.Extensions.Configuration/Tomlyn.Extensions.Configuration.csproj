@@ -7,6 +7,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageVersion>2.0.0</PackageVersion>
         <PackageTags>toml;configuration</PackageTags>
+        <PackageIconUrl>https://raw.githubusercontent.com/xoofx/Tomlyn/master/img/logo.png</PackageIconUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <LangVersion>default</LangVersion>
