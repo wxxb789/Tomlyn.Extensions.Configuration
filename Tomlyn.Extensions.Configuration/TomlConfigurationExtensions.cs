@@ -52,6 +52,10 @@ namespace Tomlyn.Extensions.Configuration
             {
                 throw new ArgumentNullException(nameof(builder));
             }
+            if (stream == null)
+            {
+                throw new ArgumentNullException(nameof(stream));
+            }
 
             return builder.Add<TomlStreamConfigurationSource>(s => s.Stream = stream);
         }
